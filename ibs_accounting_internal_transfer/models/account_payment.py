@@ -76,7 +76,7 @@ class AccountPayment(models.Model):
             'amount': self.amount,
             'currency_id': self.currency_id.id,
             'date': self.date,
-            'ref': _('Internal Transfer from %s') % self.name,
+            'memo': _('Internal Transfer from %s') % self.name,
             'is_internal_transfer': True,
             'paired_internal_transfer_payment_id': self.id,
         }
